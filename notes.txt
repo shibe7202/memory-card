@@ -1,0 +1,8 @@
+* make state variable for score, and another for best score
+* every <card> will have an onclick handler passed down from parent, it will update score state <card onClick={handler}>
+* every <card> will have an effect to fetch data from api
+* <grid> will pass down {src} randomly to <card src=''>
+
+(how to make the game run)
+* create a state variable with the img url and if isChecked for each
+* App will have an onclick handler to randomize the images, update score, and update isChecked
