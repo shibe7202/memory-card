@@ -17,8 +17,8 @@ function Card({ imageID, onClick }) {
 
     return (
         <div className='card' onClick={onClick}>
-            <img src={imageUrl} alt={imageID} id='' />
-            <p id=''>{title}</p>
+            <img className='cardImage' src={imageUrl} alt={title} id={imageID} />
+            <p className='cardTitle' id={imageID}>{title}</p>
         </div>
     )
 }
