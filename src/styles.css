@@ -14,7 +14,9 @@
     width: 100%;
     margin: 0% 6%;
     font-family: 'lato', arial;
+    --main-color: rgb(126, 152, 179)
 }
+
 
 header {
     display: flex;
@@ -23,8 +25,8 @@ header {
     margin-top: 30px;
     margin-bottom: 30px;
     color: #1a1a1a;
-    border: 2px solid rgb(211, 211, 211);
-    border-bottom: 6px double rgb(163, 163, 163);
+    border: 3px solid var(--main-color);
+    border-bottom: 8px double var(--main-color);
     border-radius: 5px;
     box-shadow: 0px 0px 10px 1px oklch(97.4% 0.003 247.858);
     background-color: oklch(98.4% 0.003 247.858);
@@ -59,12 +61,16 @@ header {
     gap: 4px;
 }
 
-.cardGrid {}
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    border: 2px solid var(--main-color);
+    margin-bottom: 30px;
+}
 
 .card {
-    width: 350px;
     height: 380px;
-    border: 2px slategray solid;
+    border: 2px rgb(132, 155, 179) solid;
     border-radius: 3px;
     padding: 6px 6px 0px 6px;
     background-color: oklch(98.4% 0.003 247.858);
@@ -81,4 +87,45 @@ header {
 .cardTitle {
     line-height: 36px;
     vertical-align: middle;
+}
+
+@media (max-width: 1600px) and (min-width: 901px) {
+
+    .headerInfo {
+        padding: 0px 29px 4px;
+        display: flex;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 44px;
+    }
+
+    .rules {
+        font-size: 18px;
+        padding-bottom: 0px;
+    }
+
+    .points {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .headerInfo {
+        padding: 0px 29px 8px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .rules {
+        font-size: 14px;
+    }
+
+    .points {
+        font-size: 14px;
+    }
 }

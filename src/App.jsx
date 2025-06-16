@@ -23,11 +23,10 @@ function App() {
       setScore(score + 1)
       bestScore < score + 1 ? setBestScore(score + 1) : null
     }
-
   }
 
   return (
-    <div>
+    <div className='mainContainer'>
       <header>
         <div className="headerInfo">
           <p className='title'>Memory Card Game</p>
